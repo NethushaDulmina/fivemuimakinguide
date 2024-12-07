@@ -124,10 +124,7 @@ Okay now we have completed, Send fivem data to Ui side part, Let go to Get data 
 
 ```js
 document.getElementById("toggleLights").addEventListener("click", () => {
-    fetch("https://my-resource/toggleLights", {
-        method: "POST",
-        body: JSON.stringify({ action: "toggle" }),
-    });
+	$.post(`https://${GetParentResourceName()}/toggleLights`, JSON.stringify({action: "toggle"})); // You should use jquery for this
 });
 ```
 
